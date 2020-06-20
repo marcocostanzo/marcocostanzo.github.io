@@ -29,6 +29,7 @@ github_username: marcocostanzo
 minimal_mistakes_skin: default
 search: true
 locale: "en-US"
+breadcrumbs: false # disabled by default
 
 # Build settings
 markdown: kramdown
@@ -67,6 +68,7 @@ author:
   name   : "Marco Costanzo"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
+  location: "Italy"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
