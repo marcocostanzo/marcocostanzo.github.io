@@ -25,3 +25,48 @@ If you have a question about using Jekyll, start a discussion on the [Jekyll For
 - [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
 - [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
 - [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+
+# Usage (Local)
+
+## Setup
+
+Install Ruby Version Manager [rvm](https://rvm.io/rvm/install)
+
+Install Ruby:
+
+```bash
+rvm list known #List available ruby versions
+rvm install ruby-2.7 #Install latest (change 2.7 with the latest)
+rvm --default use ruby-2.7 #Set the installed version as default (change the version)
+ruby -v #Check ruby version
+```
+
+Install some dependencies
+
+```bash
+sudo apt-get install build-essential zlib1g-dev
+```
+
+Optional (?) (Not sure if needed)
+```bash
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo apt install gcc g++ make
+gem update --system
+gem -v
+gem install jekyll-include-cache
+```
+
+Finally, install Jekyll:
+
+```bash
+gem install jekyll bundler
+```
+
+## Run
+
+In the project dir:
+
+```bash
+bundle exec jekyll serve
+```
