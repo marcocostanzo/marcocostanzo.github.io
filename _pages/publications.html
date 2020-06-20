@@ -1,0 +1,89 @@
+---
+layout: 
+permalink: /publications/
+title: "Publications"
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached browser-upgrade.html %}
+    {% include_cached masthead.html %}
+
+    <div class="initial-content">
+        <div>
+            <article>
+                <h1>Journals</h1>
+                <div>
+                    <script src="https://bibbase.org/show?bib=http%3A%2F%2Fmarcocostanzo.github.io%2Fbibliography%2Fjourn.bib&jsonp=1"></script> 
+                </div>
+            </article>
+            
+            <p>&mdash; </p>
+            
+            <article>
+                <h1>Conferences</h1>
+                <div>
+                    <script src="https://bibbase.org/show?bib=http%3A%2F%2Fmarcocostanzo.github.io%2Fbibliography%2Fconf.bib&jsonp=1"></script> 
+                </div>
+            </article>
+        </div>
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% if site.footer_scripts %}
+        {% for script in site.footer_scripts %}
+            <script src="{{ script | relative_url }}"></script>
+        {% endfor %}
+    {% else %}
+        <!--script src="{{ '/assets/js/main.min.js' | relative_url }}"></script-->
+        <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+    {% endif %}
+
+    {% if site.search == true or page.layout == "search" %}
+        {%- assign search_provider = site.search_provider | default: "lunr" -%}
+        {%- case search_provider -%}
+            {%- when "lunr" -%}
+            {% include_cached search/lunr-search-scripts.html %}
+            {%- when "google" -%}
+            {% include_cached search/google-search-scripts.html %}
+            {%- when "algolia" -%}
+            {% include_cached search/algolia-search-scripts.html %}
+        {%- endcase -%}
+    {% endif %}
+
+    {% include analytics.html %}
+    {% include /comments-providers/scripts.html %}
+
+    {% if site.after_footer_scripts %}
+        {% for script in site.after_footer_scripts %}
+            <script src="{{ script | relative_url }}"></script>
+        {% endfor %}
+    {% endif %}
+
+  </body>
+</html>
