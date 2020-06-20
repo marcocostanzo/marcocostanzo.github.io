@@ -106,7 +106,7 @@ defaults:
       #layout: search
       author_profile: true
       header:
-        overlay_image: /assets/images/teaser.png
+        overlay_image: /assets/images/moon-earth.jpg
   # _posts
   - scope:
       path: ""
@@ -126,7 +126,7 @@ defaults:
       layout: single
       author_profile: true
       header:
-        overlay_image: /assets/images/teaser.png
+        overlay_image: /assets/images/moon-earth.jpg
 
 category_archive:
   type: liquid
