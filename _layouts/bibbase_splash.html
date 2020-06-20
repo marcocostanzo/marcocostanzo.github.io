@@ -1,0 +1,88 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached browser-upgrade.html %}
+    {% include_cached masthead.html %}
+
+    <div class="initial-content">
+      {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+        {% include page__hero.html %}
+      {% elsif page.header.video.id and page.header.video.provider %}
+        {% include page__hero_video.html %}
+      {% endif %}
+
+      <div id="main" role="main">
+        <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+          {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+          {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+          {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+          {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+          <section class="page__content" itemprop="text">
+            {{ content }}
+          </section>
+        </article>
+      </div>
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% if site.footer_scripts %}
+      {% for script in site.footer_scripts %}
+        <script src="{{ script | relative_url }}"></script>
+      {% endfor %}
+    {% else %}
+      <script src="{{ '/assets/js/main_for_bibbase.min.js' | relative_url }}"></script>
+      <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+    {% endif %}
+
+    {% if site.search == true or page.layout == "search" %}
+      {%- assign search_provider = site.search_provider | default: "lunr" -%}
+      {%- case search_provider -%}
+        {%- when "lunr" -%}
+          {% include_cached search/lunr-search-scripts.html %}
+        {%- when "google" -%}
+          {% include_cached search/google-search-scripts.html %}
+        {%- when "algolia" -%}
+          {% include_cached search/algolia-search-scripts.html %}
+      {%- endcase -%}
+    {% endif %}
+
+    {% include analytics.html %}
+    {% include /comments-providers/scripts.html %}
+
+    {% if site.after_footer_scripts %}
+      {% for script in site.after_footer_scripts %}
+        <script src="{{ script | relative_url }}"></script>
+      {% endfor %}
+    {% endif %}
+
+
+  </body>
+</html>
