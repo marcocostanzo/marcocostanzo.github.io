@@ -12,22 +12,18 @@ bibbase_token: '&token=6ba38e1e6af3e53938ad9bfa1dd32b03'
 ---
 
 {% if jekyll.environment == "production" %}
-    {% capture prod_bibbase_token %}
-    {{ bibbase_token }}
-    {% endcapture %}
+<div>
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}{{page.bibbase_token}}"></script> 
+</div>
 {% else %}
 <div>
 <article>
-<h1>Running in NON production mode</h1>
+<h1>Running in {{jekyll.environment}} mode</h1>
 </article>
 <p>&mdash; </p> 
 </div>
-    {% assign prod_bibbase_token = "" %}
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}"></script> 
 {% endif %}
-
-<div>
-<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}{{prod_bibbase_token}}"></script> 
-</div>
 
 <!-- <p>&mdash; </p> -->
 
