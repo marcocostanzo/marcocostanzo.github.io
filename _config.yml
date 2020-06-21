@@ -16,7 +16,7 @@
 title: Marco Costanzo
 title_separator: "|"
 subtitle: "Version 0.1"
-email:
+email: marco.costanzo@unicampania.it
 url: "https://marcocostanzo.github.io"
 baseurl: ""
 repository: "marcocostanzo/marcocostanzo.github.io"
@@ -38,7 +38,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Rome # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -71,6 +71,9 @@ author:
   bio    : "My awesome biography constrained to a sentence or two goes here."
   location: "Italy"
   links:
+    - label: "e-Mail"
+      icon: "fas fa-envelope"
+      url: "mailto:marco[dot]costanzo[at]unicampania[dot]it"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://marcocostanzo.github.io"
@@ -86,6 +89,18 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
+    - label: "ResearchGate"
+      icon: "ai ai-researchgate"
+      url: "https://www.researchgate.net/profile/Marco_Costanzo2"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"
+      url: "https://scholar.google.com/citations?user=32g4jFAAAAAJ"
+    - label: "ORCID"
+      icon: "ai ai-orcid"
+      url: "https://orcid.org/0000-0001-8364-6728"
+    - label: "Curriculum Vitae"
+      icon: "ai ai-cv"
+      url: ""
 
 footer:
   links:
