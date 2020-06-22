@@ -1,0 +1,30 @@
+---
+layout: single
+---
+
+{% if page.repolink %}
+{% capture repolink %}{{ page.repolink }}{% endcapture %}
+{% else %}
+{% capture repolink %}https://github.com/{{site.github_username}}/{{ page.reponame }}{% endcapture %}
+{% endif %}
+
+{% if page.repodoc %}
+    {% capture repodoc %}{{ page.repodoc }}{% endcapture %}
+{% else %}
+    {% if jekyll.environment == "production" %}
+        {% capture repodoc %}/{{page.reponame}}/{% endcapture %}
+    {% else %}
+        {% capture repodoc %}https://{{site.github_username}}.github.io/{{page.reponame}}/{% endcapture %}
+    {% endif %}
+{% endif %}
+
+
+This is the {{page.reponame}} page!  
+
+</br>
+
+<a href="{{repolink}}">Repo</a>
+
+</br>
+
+<a href="{{repodoc}}">Doc</a>

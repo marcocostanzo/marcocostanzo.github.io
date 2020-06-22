@@ -114,6 +114,11 @@ footer:
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
 
+collections:
+  repositories:
+    output: true
+    permalink: /:collection/:path/
+
 defaults:
   # home
   - scope:
@@ -143,6 +148,17 @@ defaults:
       author_profile: true
       header:
         overlay_image: /assets/images/moon-earth.jpg
+  # _repositories
+  - scope:
+      path: ""
+      type: repositories
+    values:
+      layout: repository
+      author_profile: false
+      share: true
+      header:
+        teaser: /assets/images/moon-earth.jpg
+
 
 category_archive:
   type: liquid
@@ -150,3 +166,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+repositories_archive:
+  type: liquid
+  path: /repositories/
