@@ -6,8 +6,11 @@ main:
   # - title: "Tags"
   #   url: /tags/
   - title: "Publications"
+    description: "The bibliography of my publications"
     url: /publications/
   - title: "Repositories"
+    description: "Maintained Repositories"
     url: /repositories/
   - title: "About"
+    description: "About Me"
     url: /about/

@@ -157,7 +157,7 @@ defaults:
       author_profile: false
       share: true
       header:
-        teaser: /assets/images/moon-earth.jpg
+        teaser: http://via.placeholder.com/350
 
 
 category_archive:
