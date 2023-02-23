@@ -41,6 +41,13 @@ rvm --default use ruby-2.7 #Set the installed version as default (change the ver
 ruby -v #Check ruby version
 ```
 
+RVM BUGFIX ruby 3.0 (check if this has been solved) 
+https://github.com/rvm/rvm/issues/5209#issuecomment-1140506763
+```bash
+rvm pkg install openssl
+rvm install ruby --with-openssl-dir=/usr/share/rvm/usr
+```
+
 Install some dependencies
 
 ```bash
@@ -61,6 +68,9 @@ Finally, install Jekyll:
 
 ```bash
 gem install jekyll bundler
+gem update #update the gem dep
+gem update --system
+bundle install
 ```
 
 ## Run

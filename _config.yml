@@ -33,7 +33,8 @@ breadcrumbs: false # disabled by default
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# remote_theme: "mmistakes/minimal-mistakes@4.19.3"
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
