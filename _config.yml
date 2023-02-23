@@ -21,10 +21,8 @@ url: "https://marcocostanzo.github.io"
 baseurl: ""
 repository: "marcocostanzo/marcocostanzo.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
+  Marco Costanzo, researcher (RTD-A) at Università degli studi della Campania "Luigi Vanvitelli"
+# twitter_username: username
 github_username: marcocostanzo
 minimal_mistakes_skin: dark # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 search: true
@@ -69,7 +67,7 @@ plugins:
 author:
   name   : "Marco Costanzo"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : 'Researcher (RTD-A) at Università degli Studi della Campania "Luigi Vanvitelli".'
   location: "Italy"
   links:
     - label: "e-Mail"
@@ -93,6 +91,9 @@ author:
     - label: "ResearchGate"
       icon: "ai ai-researchgate"
       url: "https://www.researchgate.net/profile/Marco_Costanzo2"
+    - label: "Scopus"
+      icon: "ai ai-scopus"
+      url: "https://www.scopus.com/authid/detail.uri?authorId=57205142585"
     - label: "Google Scholar"
       icon: "ai ai-google-scholar"
       url: "https://scholar.google.com/citations?user=32g4jFAAAAAJ"
@@ -117,6 +118,9 @@ footer:
 
 collections:
   repositories:
+    output: true
+    permalink: /:collection/:path/
+  courses:
     output: true
     permalink: /:collection/:path/
 
@@ -159,6 +163,16 @@ defaults:
       share: true
       header:
         teaser: http://via.placeholder.com/350
+  # _courses
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: course
+      author_profile: false
+      share: true
+      header:
+        teaser: http://via.placeholder.com/350
 
 
 category_archive:
@@ -170,3 +184,6 @@ tag_archive:
 repositories_archive:
   type: liquid
   path: /repositories/
+courses_archive:
+  type: liquid
+  path: /courses/

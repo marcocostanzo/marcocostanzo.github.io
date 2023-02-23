@@ -1,0 +1,20 @@
+---
+layout: single
+---
+
+This is the {{page.coursename}} page!  
+
+{% if page.courselink %}
+
+    {% if page.courseacronym %}
+        {% capture courseacronym %}{{ page.courseacronym }}{% endcapture %}
+    {% else %}
+        {% capture courseacronym %}page.courselink{{ page.reponame }}{% endcapture %}
+    {% endif %}
+
+</br>
+
+<a href="{{page.courselink}}">{{courseacronym}}</a>
+
+</br>
+{% endif %}
