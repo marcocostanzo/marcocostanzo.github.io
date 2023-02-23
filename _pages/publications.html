@@ -1,6 +1,6 @@
 ---
 # layout: bibbase_splash
-layout: 
+layout:
 permalink: /publications/
 title: "Publications"
 author_profile: false
@@ -11,36 +11,20 @@ bibbase_opt: '&theme=dividers&fullnames=1&owner=Costanzo&groupby=type&sort=-year
 bibbase_opt_dbg: '&nocache=1'
 ---
 
+<button onclick="location.href = '/';" class="btn"><i class="fa fa-home"></i> Home</button>
+
 {% if jekyll.environment == "production" %}
 <div>
-<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}"></script> 
+    <script
+        src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}"></script>
 </div>
 {% else %}
 <div>
-<article>
-<h1>Running in {{jekyll.environment}} mode</h1>
-</article>
-<p>&mdash; </p> 
+    <article>
+        <h1>Running in {{jekyll.environment}} mode</h1>
+    </article>
+    <p>&mdash; </p>
 </div>
-<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}{{page.bibbase_opt_dbg}}"></script> 
+<script
+    src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fbiblio.bib&jsonp=1{{page.bibbase_opt}}{{page.bibbase_opt_dbg}}"></script>
 {% endif %}
-
-<!-- <p>&mdash; </p> -->
-
-<!-- <div>
-<article>
-    <h1>Journals</h1>
-    <div>
-        <script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fjourn.bib&jsonp=1{{page.bibbase_opt}}""></script>  
-    </div>
-</article>
-
-<p>&mdash; </p>
-
-<article>
-    <h1>Conferences</h1>
-    <div>
-        <script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fmarcocostanzo%2Fassets%2Fmaster%2Fbib%2Fconf.bib&jsonp=1{{page.bibbase_opt}}""></script>  
-    </div>
-</article>
-</div> -->
