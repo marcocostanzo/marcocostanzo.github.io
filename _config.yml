@@ -29,6 +29,11 @@ search: true
 locale: "en-US"
 breadcrumbs: false # disabled by default
 
+# SEO Related
+google_site_verification : i7bq4nhg8HNjl9Z1XJFbXaR04SfL1l8r6xXHhD2gnz8
+# bing_site_verification   :
+# yandex_site_verification :
+
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
