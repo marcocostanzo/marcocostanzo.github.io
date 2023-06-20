@@ -46,6 +46,7 @@ https://github.com/rvm/rvm/issues/5209#issuecomment-1140506763
 ```bash
 rvm pkg install openssl
 rvm install ruby --with-openssl-dir=/usr/share/rvm/usr
+# or (depending on the installation) --with-openssl-dir=$HOME/.rvm/usr OR --with-openssl-dir=/usr/local/rvm/usr
 ```
 
 Install some dependencies
