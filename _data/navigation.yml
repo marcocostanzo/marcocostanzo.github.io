@@ -1,6 +1,6 @@
 main:
-  # - title: "Posts"
-  #   url: /posts/
+  - title: "Posts"
+    url: /posts/
   # - title: "Categories"
   #   url: /categories/
   # - title: "Tags"
@@ -8,6 +8,9 @@ main:
   - title: "Courses"
     description: "My Courses"
     url: /courses/
+  - title: "Awards"
+    description: "My Courses"
+    url: /awards/
   - title: "Publications"
     description: "The bibliography of my publications"
     url: /publications/

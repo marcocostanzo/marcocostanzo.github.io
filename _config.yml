@@ -8,14 +8,24 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# see https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development  # disable compression in dev environment
+
+
+name: "Marco Costanzo"
 title: Marco Costanzo
 title_separator: "|"
-subtitle: "Version 0.1"
+subtitle: "Version 1.0"
 email: marco.costanzo@unicampania.it
 url: "https://marcocostanzo.github.io"
 baseurl: ""
@@ -128,6 +138,9 @@ collections:
   courses:
     output: true
     permalink: /:collection/:path/
+  awards:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # home
@@ -144,6 +157,8 @@ defaults:
       type: posts
     values:
       layout: single
+      show_date: true
+      date_format: "%Y-%m-%d"
       author_profile: true
       read_time: true
       comments: true
@@ -178,6 +193,16 @@ defaults:
       share: true
       header:
         teaser: http://via.placeholder.com/350
+  # _awards
+  - scope:
+      path: ""
+      type: awards
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      header:
+        teaser: /assets/images/award_teaser.svg
 
 
 category_archive:
@@ -192,3 +217,6 @@ repositories_archive:
 courses_archive:
   type: liquid
   path: /courses/
+awards_archive:
+  type: liquid
+  path: /awards/
