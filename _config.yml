@@ -31,7 +31,7 @@ url: "https://marcocostanzo.github.io"
 baseurl: ""
 repository: "marcocostanzo/marcocostanzo.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
-  Marco Costanzo, researcher (RTD-A) at Università degli studi della Campania "Luigi Vanvitelli"
+  Marco Costanzo, researcher (RTD-B) at Università degli studi della Campania "Luigi Vanvitelli"
 # twitter_username: username
 github_username: marcocostanzo
 minimal_mistakes_skin: dark # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
