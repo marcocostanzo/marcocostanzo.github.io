@@ -82,7 +82,7 @@ plugins:
 author:
   name   : "Marco Costanzo"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : 'Researcher (RTD-A) at Università degli Studi della Campania "Luigi Vanvitelli".'
+  bio    : 'Researcher (RTD-B) at Università degli Studi della Campania "Luigi Vanvitelli".'
   location: "Italy"
   links:
     - label: "e-Mail"
